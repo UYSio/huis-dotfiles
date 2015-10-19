@@ -372,3 +372,6 @@ set completeopt=menuone,longest,preview
 " let g:jedi#rename_command = "<leader>r"
 " let g:jedi#show_call_signatures = "1"
 
+" associate *.pxi with Clojure filetype
+au BufRead,BufNewFile *.pxi setfiletype clojure
+au BufRead,BufNewFile *.spacemacs setfiletype lisp

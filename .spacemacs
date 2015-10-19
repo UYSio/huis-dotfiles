@@ -19,17 +19,25 @@
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
+     (clojure :variables clojure-enable-fancify-symbols t)
+     dockerfile
      emacs-lisp
-     ;; (git :variables
-     ;;      git-gutter-use-fringe t)
-     markdown
-     ;; org
-     ;; shell
-     ;; syntax-checking
-     javascript
+     git
      html
-     clojure
+     javascript
+     markdown
+     org
+     pixie
      python
+     racket
+     ruby
+     search-engine
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     shell-scripts
+     syntax-checking
+     version-control
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -68,8 +76,10 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-light
-                         solarized-dark
+   dotspacemacs-themes '(solarized-dark
+                         solarized-light
+                         spacemacs-dark
+                         spacemacs-light
                          leuven
                          monokai
                          zenburn)
@@ -147,6 +157,8 @@ before layers configuration."
    ;; specified with an installed package.
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
+
+   evil-escape-key-sequence "jjjdfvjhbdfjhb"
    )
   ;; User initialization goes here
   )
@@ -161,9 +173,6 @@ layers configuration."
   ;; Whitespace & wrapping
   (setq-default truncate-lines t)
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-  ;; Paradox Github token
-  (setq paradox-github-token "c2f88ac89786d1fe991650b978f8bd1814af4061")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -178,8 +187,8 @@ layers configuration."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
- '(paradox-automatically-star t)
- '(ring-bell-function (quote ignore) t))
+ '(ring-bell-function (quote ignore) t)
+ '(safe-local-variable-values (quote ((require-final-newline . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
