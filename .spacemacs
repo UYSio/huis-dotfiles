@@ -6,7 +6,7 @@
   "Configuration Layers declaration."
   (setq-default
    ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
+   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
@@ -38,8 +38,9 @@
      shell-scripts
      syntax-checking
      version-control
+     yaml
      )
-   ;; List of additional packages that will be installed wihout being
+   ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
@@ -158,7 +159,7 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
 
-   evil-escape-key-sequence "jjjdfvjhbdfjhb"
+   evil-escape-key-sequence "i_dont_want_this"
    )
   ;; User initialization goes here
   )
@@ -177,21 +178,3 @@ layers configuration."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil)
- '(ahs-default-range (quote ahs-range-whole-buffer))
- '(ahs-idle-interval 0.25)
- '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil)
- '(ring-bell-function (quote ignore) t)
- '(safe-local-variable-values (quote ((require-final-newline . t)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
