@@ -31,6 +31,7 @@
      python
      racket
      ruby
+     ruby-on-rails ; for cucumber
      search-engine
      (shell :variables
             shell-default-height 30
@@ -129,7 +130,7 @@ before layers configuration."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'.
@@ -162,6 +163,20 @@ before layers configuration."
    evil-escape-key-sequence "i_dont_want_this"
    )
   ;; User initialization goes here
+  (setq-default
+    ;; js2-mode
+    js2-basic-offset 2
+    ;; web-mode
+    css-indent-offset 2
+    web-mode-markup-indent-offset 2
+    web-mode-css-indent-offset 2
+    web-mode-code-indent-offset 2
+    web-mode-attr-indent-offset 2
+    )
+  (with-eval-after-load 'web-mode
+    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
   )
 
 (defun dotspacemacs/config ()
