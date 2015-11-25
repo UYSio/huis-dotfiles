@@ -34,6 +34,7 @@
      ruby
      ruby-on-rails ; for cucumber
      search-engine
+     scala
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
