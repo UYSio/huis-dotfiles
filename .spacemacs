@@ -190,8 +190,7 @@ layers configuration."
 
   ;; Whitespace & wrapping
   (setq-default truncate-lines t)
-  (add-hook 'before-save-hook 'delete-trailing-whitespace)
-)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
