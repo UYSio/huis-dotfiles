@@ -188,6 +188,9 @@ layers configuration."
   (setq markdown-open-command "/usr/bin/google-chrome")
   (add-to-list 'warning-suppress-types '(undo discard-info))
 
+  ;; show line numbers by default
+  (global-linum-mode)
+
   ;; Whitespace & wrapping
   (setq-default truncate-lines t)
   (add-hook 'before-save-hook 'delete-trailing-whitespace))

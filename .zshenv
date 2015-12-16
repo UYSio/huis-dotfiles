@@ -9,4 +9,3 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 path=($path)
 export PATH="$PATH:$HOME/.rvm/bin"
-export DOCKER_HOST=tcp://localhost:4243
