@@ -1,11 +1,11 @@
 path=($path "${HOME}/bin")
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
+  export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 path=($path)
 export PATH="$PATH:$HOME/.rvm/bin"
