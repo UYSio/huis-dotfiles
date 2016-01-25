@@ -27,7 +27,9 @@
      html
      javascript
      markdown
-     org
+     (org :variables
+          org-enable-reveal-js t)
+     php
      pixie
      python
      racket
@@ -193,7 +195,8 @@ layers configuration."
 
   ;; Whitespace & wrapping
   (setq-default truncate-lines t)
-  (add-hook 'before-save-hook 'delete-trailing-whitespace))
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+  (add-hook 'text-mode-hook 'turn-on-auto-fill))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
