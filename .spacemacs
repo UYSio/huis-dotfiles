@@ -26,6 +26,7 @@
      git
      html
      javascript
+     lua
      markdown
      (org :variables
           org-enable-reveal-js t)
