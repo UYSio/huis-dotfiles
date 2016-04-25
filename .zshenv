@@ -9,3 +9,5 @@ if which pyenv > /dev/null; then
 fi
 path=($path)
 export PATH="$PATH:$HOME/.rvm/bin"
+export VISUAL=vim
+export TERM=xterm-256color

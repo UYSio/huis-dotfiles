@@ -15,6 +15,7 @@ set number
 set ignorecase
 set showmatch
 set hlsearch
+hi Search ctermbg=DarkGrey
 set incsearch
 set nobackup
 set noswapfile

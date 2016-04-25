@@ -30,7 +30,6 @@
      markdown
      (org :variables
           org-enable-reveal-js t)
-     php
      pixie
      python
      racket
@@ -195,9 +194,12 @@ layers configuration."
   (global-linum-mode)
 
   ;; Whitespace & wrapping
-  (setq-default truncate-lines t)
+  ;; (setq-default truncate-lines t)
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  (add-hook 'text-mode-hook 'turn-on-auto-fill))
+  ;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+  (sp-use-paredit-bindings)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
